@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nébula Music - Registro</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+
+    <main class="auth-container">
+        <section class="auth-card">
+            
+            <!-- TAREA PARA EL ALUMNO:
+                 Crea un formulario que envíe los datos mediante POST a "/crear-cuenta".
+                 Debe contener campos para:
+                 - Nombre completo (texto)
+                 - Correo electrónico (email)
+                 - Contraseña (password)
+                 - Pseudónimo (texto con patrón de validación: [letras de 3 a 10]-[números de 2 a 10])
+                 - Género (radio buttons: Femenino, Masculino, Otro)
+                 - Tipo de Suscripción (select: Gratis, Premium Mensual, Premium Anual)
+                 - Fecha de nacimiento (date)
+                 - Aceptar términos y condiciones (checkbox)
+                 - Comentarios adicionales o gustos (textarea)
+            -->
+            <form class="auth-form" method="post" action="/crear-cuenta" enctype="application/x-www-form-urlencoded">
+                <!-- Escribe tus etiquetas (label) e inputs aquí -->
+                <h2>Crear Cuenta</h2>
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Perez" required minlength="5" maxlength="100">
+                </div>
+                <div>
+                    <label for="correo">Correo Electronico</label>
+                    <input type="email" id="correo" name="correo" placeholder="juan@gmail.com" required>
+                </div>
+                <div>
+                    <label for="password">Password: </label>
+                    <input type="password" id="password" name="password" minlength="8" placeholder="********" required>
+                </div>
+                <div>
+                    <label for="txt_pseudonimo">Pseudonimo: </label>
+                    <input type="text" id="txt_pseudonimo" name="txt_pseudonimo" required placeholder="Nebula-2025" pattern="[a-zA-Z]{3,10}[-][0-9]{2,10}">
+                </div>
+                <div>
+                    <label>Genero: </label>
+                    <div>
+                        <input type="radio" id="rad_femenino" name="rad_genero" value="femenino" required>
+                        <label for="rad_femenino">Femenino: </label>
+                        <input type="radio" id="rad_masculino" name="rad_genero" value="masculino" required>
+
+                        <label for="rad_masculino">Masculino: </label>
+                        <input type="radio" id="rad_otro" name="rad_genero" value="otro" required>
+
+                        <label for="rad_otro">Otro/Prefiero no decir</label>
+                    </div>
+                </div>
+                <div>
+                    <label for="selec_suscription">Suscripcion: </label>
+                    <select id="selec_suscription" name="selec_suscription" required>
+                        <option value="--" >Selecciona una Opcion</option>
+                        <option value="premium-mensual">Mensual</option>
+                        <option value="premium-anual">Anual</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="fechaNacimiento">Fecha de Nacimiento: </label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                </div>
+                <div>
+                    <label for="comentarios">Comentarios </label>
+                    <textarea id="comentarios" name="comentarios" rows="4" cols="40" placeholder="Que te gustaria mejorar"></textarea>
+                </div>
+                <div>
+                    <label>Acepto los terminos y condiciones</label>
+                    <input type="checkbox" id="terminos" name="checkTerminos" value="Aceptado" required>
+                </div>
+
+                <div>
+                    <button type="reset">Limpiar</button>
+                    <button type="submit">Crear una Cuenta</button>
+                </div>
+            </form>
+            <p>Ya tienes una cuenta? </p><a href="iniciar-sesion.html">Inicia Sesion</a>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright Nébula 2025.</p>
+    </footer>
+
+</body>
+</html>
