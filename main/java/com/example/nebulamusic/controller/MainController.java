@@ -42,7 +42,7 @@ public class MainController {
             return "error";
         }
         usuarioService.registrar(usuario);
-        return "redirect: /iniciar-sesion";
+        return "redirect:/iniciar-sesion";
     }
 
     @PostMapping("/auntentication")

@@ -1,47 +1,56 @@
-<!DOCTYPE html>
+<html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nébula Music - Iniciar Sesión</title>
-    <link rel="stylesheet" href="../static/styles/styles.css">
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
 
-    <main class="auth-container">
-        <section class="auth-card">
-            <form method="post" action="/autentication" enctype="application/x-www-form-urlencoded">
-             <h1>Iniciar Sesion</h1>
-                <div>
-                    <label for="correo">Correo Electronico: </label>
-                    <input type="email"
-                           id="correo"
-                           name="correo"
-                           placeholder="correo@example.com"
-                           required
-                           minlength="5"
-                           maxlength="100">
-                </div>
-                <div>
-                    <label for="contraseña">Password: </label>
-                    <input type="password" name="contraseña" id="contraseña" placeholder="********" required>
+<main class="auth-container">
+    <section class="auth-card">
+        <form method="post" action="/autentication" enctype="application/x-www-form-urlencoded">
+            <div class="form-logo">
+                <img src="./imgs/nebula-03.svg" alt="Logo Nébula">
+            </div>
 
-                </div>
-                <div>
-                    <button type="reset">Limpiar</button>
-                    <button type="submit">Iniciar Sesion</button>
-                </div>
+            <div class="form-header">
+                <h3>Inicia Sesión</h3>
+                <p class="form-subtitle">Ingresa tus credenciales de acceso</p>
+            </div>
 
-            </form>
-            <p>Aun no tienes una cuenta? </p><a href="registro.html">Registrate aqui</a>
+            <div class="form-group">
+                <label for="correo">Correo Electornico</label>
+                <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="correo@ejemplo.com"
+                        required
+                        minlength="5"
+                        maxlength="100"
+                >
+            </div>
 
+            <div class="form-group">
+                <label for="contrasenia">Contraseña</label>
+                <input type="password" name="contrasenia" id="contrasenia" placeholder="********" required>
 
-        </section>
-    </main>
+            </div>
 
-    <footer>
-        <p>Copyright Nébula 2025.</p>
-    </footer>
+            <div class="form-group">
+                <button type="submit">Iniciar Sesión</button>
+                <button type="reset">Limpiar el Formulario</button>
+            </div>
+        </form>
+        <p>¿Aun no tienes una cuenta?</p><a href="registro.html">Registrate aqui</a>
+    </section>
+</main>
+
+<footer>
+    <p>Copyright Nébula 2025.</p>
+</footer>
 
 </body>
 </html>
