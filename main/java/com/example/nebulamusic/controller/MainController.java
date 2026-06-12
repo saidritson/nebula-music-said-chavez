@@ -45,9 +45,10 @@ public class MainController {
         return "redirect:/iniciar-sesion";
     }
 
-    @PostMapping("/auntentication")
-    public String auntentificacion(@RequestParam String correo, @RequestParam String password){
-        if (usuarioService.auntentificar(correo, password)){
+    @PostMapping("/autenticacion")
+    public String auntentificacion(@RequestParam("correo") String correo,
+                                   @RequestParam("contrasenia") String contrasenia){
+        if (usuarioService.auntentificar(correo, contrasenia)){
             return "redirect:/index";
         }
         return "redirect:/error";

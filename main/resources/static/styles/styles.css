@@ -259,3 +259,98 @@ textarea {
     box-sizing: border-box;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+.btn-primary{
+    background-color: var(--nav-links);
+    color: white;
+
+}
+
+.btn-primary:hover{
+    background-color: var(--highlight);
+    color: black;
+    box-shadow: 0 0 15px rgba(237, 246, 125, 0.4);
+}
+
+.btn-secundary{
+    background-color: transparent;
+
+}
+
+button{
+    width: 100%;
+    height: 14px;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.link{
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 15px;
+
+}
+
+footer{
+    font-size: 0.85rem;
+    color: #cbd5e0;
+    margin-top: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid #2a280a;
+    box-shadow: rgba(0,0,0,0.3);
+
+}
+
+@media (max-width: 768px){
+    body{
+        background-color: white;
+
+
+    }
+    .auth-container{
+        max-width: 1800px;
+    }
+    .auth-card{
+        max-width: 1500px;
+    }
+
+}
+footer p{
+    font-size: 0.85rem;
+    color: #cbd5e0;
+    margin-top: 10px;
+}
+
+@media (max-width: 786px){
+    .menu-button{
+        display: flex;
+    }
+    nav ul{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 10%;
+        background-color: rgba(19,18,0,0.98);
+
+    }
+
+    #menu-toogle:checked ~ ul{
+        display: flex;
+    }
+
+    #menu-toogle:checked ~ .menu-button span:nth-child(1){
+         transform: rotate(45deg)  translate(5px, 6px);
+    }
+    #menu-toogle:checked ~ .menu-button span:nth-child(2){
+        opacity: 0;
+    }
+    #menu-toogle:checked ~ .menu-button span:nth-child(3){
+        transform: rotate(-45deg)  translate(5px, -7px);
+    }
+}
